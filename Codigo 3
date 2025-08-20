@@ -1,0 +1,3 @@
+print ("hola como esta?")
+edad = int (input ("Cual es su edad?"))
+print ("su edad dentro de 5 años es: ", edad + 5)

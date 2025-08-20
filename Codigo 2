@@ -1,0 +1,4 @@
+#segundo codigo
+print ("--------------------------hola este es mi segundo codigo-----------------------------------")
+nombre = input ("Cual es tu nombre") #leer la entrada
+print ("hola bienvenido ", nombre)
