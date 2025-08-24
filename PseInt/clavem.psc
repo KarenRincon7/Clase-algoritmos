@@ -3,7 +3,7 @@ Algoritmo clavem
 	Clavecorrexta = 1234
 	leer clave
 	Mientras clave <> Clavecorrexta y intentos <=4 Hacer
-		Escribir "escribe otra vez tu contraseña" 
+		Escribir "escribe otra vez tu contraseÃ±a" 
 		leer Clave
 		intentos <- intentos+1
 	Fin Mientras
