@@ -1,0 +1,6 @@
+#este progrma me va a ayudar a crear codigo de otros lenjuages o otras utilidades
+
+import datetime
+
+ahora = datetime.datetime.now ()
+print ("la hora es:", ahora)

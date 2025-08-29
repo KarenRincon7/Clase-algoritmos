@@ -1,0 +1,10 @@
+#Este es mi tercer programa para entregar esta semana 
+print ("Bienvenidos a el mundo python")
+nombre="Luna"
+edad="130"
+altura="2.01"
+es_estudiante=True
+usuario=input ("Escriba su nombre " )
+print ("Hola señor usuario ", usuario)
+suma=45 + 52
+print ("El resultado de la suma de 45 + 52 , es " , suma)

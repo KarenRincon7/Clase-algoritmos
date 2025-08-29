@@ -1,0 +1,12 @@
+import itertools
+
+# Contar desde 10 en pasos de 2
+for num in itertools.count(10, 2):
+    if num > 20:
+        break #romper/terminar el ciclo
+    print(num)
+
+# Combinaciones
+frutas = ['pera', 'manzana', 'uva']
+for comb in itertools.combinations(frutas, 2):
+    print(comb)

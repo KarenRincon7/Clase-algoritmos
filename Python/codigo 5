@@ -1,0 +1,8 @@
+# este es un programa para entrenarme en listas y colecciones -> lista [] es una llave
+
+frutas = ["manzana","pera","banano","fresa", "uva", "naranja", "guanabana", "mango", "kiwi"]
+print (frutas) #cuando esta en posicion 0 imprime manzana que es la que se encuentra primero
+frutas.reverse () #metodos
+
+for fruta in frutas:
+    print (fruta)

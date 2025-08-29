@@ -1,0 +1,6 @@
+#funciones se usa para poder ejecutar varias instrucciones o pasos a la vez
+def saludar (lista):
+ for nombre in lista:
+    print ("hola bienvenido a su clase de algoritmos", nombre)
+estudiante=["sofia","juan carlos", "owen"]
+saludar(estudiante)
