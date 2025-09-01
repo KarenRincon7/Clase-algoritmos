@@ -1,0 +1,11 @@
+#ejercicion 9
+estudiante ={
+ "Hernandario":"Toolkit",
+    "edad":17,
+    "carrera " : "ingenieria en sistemas",}
+print("Nombre:", estudiante ["Hernandario"] )
+#agregar elemento al diccionario
+estudiante ["nota"] = 90
+#recorrer una posicion en el diccionario
+for clave, valor in estudiante.items():
+    print (clave,":", valor)

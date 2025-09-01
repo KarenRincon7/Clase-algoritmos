@@ -1,0 +1,19 @@
+#este va a hacer nuestro programa de estructura de datos lista[], tupla (), set, diccionario {}
+
+import random #sirve para conectar numeros aleatorios
+
+#generar un numero aleatorio
+
+dado=random.randint(1,0)
+print ("el dado muestra el numero :", dado)
+
+#genera un numero decimal aleatorio entre 0 y 1
+decimal = random.random()
+print ("Numero decimal aleatorio", decimal)
+
+#escoger un elemento aleatorio de una lista
+
+frutas = ["manzana", "pera", "uva", "mango"]
+eleccion = random.choice (frutas)
+
+print ("la fruta elegida es:")

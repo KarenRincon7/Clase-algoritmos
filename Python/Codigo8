@@ -1,0 +1,21 @@
+import pygame
+
+#inicializar pygame
+pygame.init()
+
+ventana = pygame.display.set_mode((400,300))
+pygame.display.set_caption("Mi primer juego")
+#colores
+azul = (0, 0, 255)
+#ciclo principal del juego
+ejecutando = True
+while ejecutando:
+    for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            ejecutando = False
+
+    ventana.fill(azul)
+    #actualizar la pantalla
+    pygame.display.flip()
+
+    pygame.quit()
