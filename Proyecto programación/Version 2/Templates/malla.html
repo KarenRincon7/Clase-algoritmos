@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Malla {{ nombre }} {{ carrera | capitalize }}{% endblock %}
+
+{% block body %}
+<style>
+  .container-malla {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 2vw;
+  }
+  .row-malla {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .semestre {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #fce4ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .materia {
+    margin: 6px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f8c4d8;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+  }
+  .materia:hover {
+    background-color: #f48fb1;
+    color: white;
+  }
+  .materia.tachada {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+</style>
+
+<div class="container-malla">
+  <h1 class="text-center my-4">Malla {{ nombre }} {{ carrera | capitalize }}</h1>
+  {% set semestres = malla.items()|list %}
+  <div class="row-malla">
+    {% for semestre, materias in semestres[:4] %}
+    <div class="semestre">
+      <h4>{{ semestre }}</h4>
+      {% for materia in materias %}
+      <div class="materia" onclick="toggleMateria(this, '{{ carrera }}')">
+        {{ materia }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row-malla">
+    {% for semestre, materias in semestres[4:8] %}
+    <div class="semestre">
+      <h4>{{ semestre }}</h4>
+      {% for materia in materias %}
+      <div class="materia" onclick="toggleMateria(this, '{{ carrera }}')">
+        {{ materia }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  function toggleMateria(el, carrera) {
+    el.classList.toggle("tachada");
+    saveProgress(carrera);
+  }
+    function saveProgress(carrera) {
+      let data = [];
+      document.querySelectorAll(".materia.tachada").forEach(m => {
+        data.push(m.innerText.trim());
+      });
+      localStorage.setItem("progreso_" + carrera, JSON.stringify(data));
+    }
+
+    function loadProgress(carrera) {
+      let data = JSON.parse(localStorage.getItem("progreso_" + carrera) || "[]");
+      document.querySelectorAll(".materia").forEach(m => {
+        if (data.includes(m.innerText.trim())) {
+          m.classList.add("tachada");
+        }
+      });
+    }
+
+    window.onload = () => {
+      loadProgress("{{ carrera }}");
+    };
+</script>
+{% endblock %}

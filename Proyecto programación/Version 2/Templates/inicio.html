@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block body %}
+<h1 class="text-center mb-4">Selecciona una carrera</h1>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <div class="col">
+    <div class="card h-100 shadow">
+      <div class="card-body text-center">
+        <h5 class="card-title">Ingeniería Mecatrónica</h5>
+        <p class="card-text">Revisa la malla curricular de Mecatrónica.</p>
+        <a href="/malla/mecatronica" class="btn btn-primary">Ver Malla</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100 shadow">
+      <div class="card-body text-center">
+        <h5 class="card-title">Ingeniería de Sistemas</h5>
+        <p class="card-text">Revisa la malla curricular de Sistemas.</p>
+        <a href="/malla/sistemas" class="btn btn-primary">Ver Malla</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100 shadow">
+      <div class="card-body text-center">
+        <h5 class="card-title">Ingeniería en Química</h5>
+        <p class="card-text">Revisa la malla curricular de Química.</p>
+        <a href="/malla/quimica" class="btn btn-primary">Ver Malla</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
