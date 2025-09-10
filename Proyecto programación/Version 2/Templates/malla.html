@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
-{% block title %}Malla {{ nombre }} {{ carrera | capitalize }}{% endblock %}
+{% block title %}Malla {{ nombre }}{% endblock %}
 
 {% block body %}
 <style>
@@ -53,7 +53,7 @@
 </style>
 
 <div class="container-malla">
-  <h1 class="text-center my-4">Malla {{ nombre }} {{ carrera | capitalize }}</h1>
+  <h1 class="text-center my-4">Malla {{ nombre }}</h1>
   {% set semestres = malla.items()|list %}
   <div class="row-malla">
     {% for semestre, materias in semestres[:4] %}
